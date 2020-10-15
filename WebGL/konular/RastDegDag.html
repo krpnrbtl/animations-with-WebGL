@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../stil.css" />
+
+  <!-- Babylon.js -->
+  <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+  <script src="https://preview.babylonjs.com/ammo.js"></script>
+  <script src="https://preview.babylonjs.com/cannon.js"></script>
+  <script src="https://preview.babylonjs.com/Oimo.js"></script>
+  <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+  <script src="https://preview.babylonjs.com/babylon.js"></script>
+  <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+  <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+  <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+  <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+  <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+  <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+  <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav class="white">
+            <a href="/" title="İstatistikOlasılık">
+                <img src="../image/zar.png" width="150px" height="60px"/>
+            </a>
+            <div class="container">
+                <ul>
+                    <li><a>ANİMASYONLAR</a>
+                        <ul>
+                            <li><a href="../animasyonBar/para.html" title="Para Animasyon" target="_blank">Para Atma</a></li>
+                            <li><a href="../animasyonBar/top.html" title="Top Animasyon" target="_blank">Top Seçme</a></li>
+                            <li><a href="../animasyonBar/zar.html" title="Zar Animasyon" target="_blank">Zar Atma</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html" title="İstatistikOlasılık">ANASAYFA</a></li>
+                </ul> 
+            </div>
+        </nav>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="konular">
+                <div class="konuDetay">
+                    <div class="icerik">
+                        <h2>Rastgele Değerlerin Dağılımı</h2>
+                        <div class="divider"></div>
+                        <p>
+                                Araştırmacılar, bazen sonucun kendisinden daha çok, önemli olan belirli sonuçların
+                                durumları ile ilgilenebilirler. Örneğin; bir zar deneyinde iki zarın üst yüzeyindeki
+                                sayıların toplamının 7 olup olmadığı ile ilgileniriz ve 7 toplamının nasıl olduğu ile
+                                ilgilenmeyiz. İlgilendiğimiz bu sayısal değeri olan fonksiyonlara rastgele değişken
+                                denir. Yani rastgele değişken, şuanki durumlar ile hesaplanamayan ileride
+                                oluşabileceği tahmin edilemeyen durumlardır. Belirli yollar arasında kaza meydana
+                                gelme sayısı, partilerin çıkaracağı milletvekili sayısı, bir saatte doğan çocukların sayısı,
+                                bir bölgenin nem değerleri, 10 yılda oluşabilecek en büyük depremlerin şiddeti ve
+                                bunlar gibi birçok olay rastgele değişkenlere sahiptir.
+                            <br/>
+                                Bir X raslantı değişkeninin x değerini olması olasılıkları aşağıdaki biçimde ifade edilir:
+                            <br/><br/>
+                                P(X = x) = P[X(s) = x] 
+                            <br/><br/>
+                                P(X ≤ x) = P[X(s) ≤ x] 
+                            <br/><br/>
+                                P(X > x) = P[X(s) > x] 
+                            <br/><br/>
+                                P(a ≤ X ≤ b) = P[a ≤ X(s) ≤ b] 
+                            <br/><br/>
+                                Bir rastgele değişkenin muhtemel değerlerden birini alma ihtimalini gösteren
+                                fonksiyona PMF denir. CDF ise bir rastgele değişkenin herhangi bir değerden küçük
+                                olma yada bir değer aralığı içinde olma ihtimaline denir. Bir olayın a ve b arasında
+                                bir değer alma olasılığı o sürekli değişkenin a ve b’deki dağılım fonksiyonu değerleri
+                                arasındaki farka eşittir. Yani;
+                            <br/><br/>
+                                P(a ≤ X ≤ b) = F(b) - F(a) 
+                        </p>
+                        <h4>Rastgele Top Seçme Animasyonu</h4>
+                        <p>Animasyonda top şeç butonuna basıldığında bir kutu içerisindeki kırmızı, yeşil ve mavi 
+                            toplardan biri rastgele seçilir. </p>
+                        <canvas id="top"> 
+                            <script src="../babylonkod/top.js"></script>
+                        </canvas>
+                        <!-- <h4>Topların PMD - CMF Grafikleri</h4>
+                        <p>Grafikte seçilen topların PMD ve CMF değerleri oluşur.</p>
+                        <canvas id="pmfcdf">
+                            <script src="../babylonkod/pmfcdf.js"></script>
+                        </canvas> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

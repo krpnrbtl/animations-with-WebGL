@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../stil.css" />
+
+  <!-- Babylon.js -->
+  <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+  <script src="https://preview.babylonjs.com/ammo.js"></script>
+  <script src="https://preview.babylonjs.com/cannon.js"></script>
+  <script src="https://preview.babylonjs.com/Oimo.js"></script>
+  <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+  <script src="https://preview.babylonjs.com/babylon.js"></script>
+  <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+  <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+  <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+  <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+  <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+  <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+  <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+    <div class="navbar-fixed">
+        <nav class="white">
+            <a href="/" title="İstatistikOlasılık">
+                <img src="../image/zar.png" width="150px" height="60px"/>
+            </a>
+            <div class="container">
+                <ul>
+                    <li><a>ANİMASYONLAR</a>
+                        <ul>
+                            <li><a href="../animasyonBar/para.html" title="Para Animasyon" target="_blank">Para Atma</a></li>
+                            <li><a href="../animasyonBar/top.html" title="Top Animasyon" target="_blank">Top Seçme</a></li>
+                            <li><a href="../animasyonBar/zar.html" title="Zar Animasyon" target="_blank">Zar Atma</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html" title="İstatistikOlasılık">ANASAYFA</a></li>
+                </ul> 
+        </nav>
+    </div>
+
+    <div class="content">
+    <div class="container">
+        <div class="konular">
+            <div class="konuDetay">
+                <div class="icerik">
+                    <h2>Beklenen Değer</h2>
+                    <div class="divider"></div>
+                    <p>
+                        Rastgele bir değişkenin veya rastgele bir vektörün dağılımı, ilgili olasılıkların birleşimi
+                        ve davranışı hakkındaki tüm bilgiyi içerir. Bu kapsamda; varyans, standart sapma,
+                        kovaryans ve korelasyon bu bölümde anlatılır.
+                        <br/><br/>
+                        <h3>Beklenen Değer</h3>
+                        Beklenen değer X rastgele değişkeninin olabilirlik değerlerinin ağırlıklı ortalamasıdır.
+                        Yani bize X’in dağılımının nerede merkezlendiğini söyler.
+                        <br/><br/>
+                        µ = E(X) = ∑xP(x)
+                        <br/><br/>
+                        Bir rastgele değişkenin fonksiyonunun beklenen değeri;
+                        <br/><br/>
+                        E{g(X)} = ∑g(x)P(x)
+                        <br/><br/>
+                        • Bir x rastgele değişkeni sabit bir k sayısı ile çarpılırsa elde edilen yeni kx rastgele
+                        değişkeninin beklenen değeri önceki rastgele değişkenin beklenen değerinin bu
+                        k sabiti ile çarpımına eşittir.
+                        <br/><br/>
+                        E(kx) = kE(x)
+                        <br/><br/>
+                        • Aynı olabilirlik uzayının iki farklı rastgele değişkeni x ve y ise, bunların
+                        toplamının beklenen değeri, her birinin beklenen değerleri toplamına eşittir.
+                        <br/><br/>
+                        E(x + y) = E(x) + E(y)
+                        <br/><br/>
+                        • c sabit bir değer ise
+                        <br/><br/>
+                        E(c) = c
+                        <br/><br/>
+                        Bu maddelere göre;
+                        <br/><br/>
+                        E(aX + bY + c) = aE(X) + bE(Y ) + c
+                        <br/><br/>
+                        denklemi sağlanır.
+                    </p>
+                    <h4>Zar Atma Animasyonu</h4>
+                    <p>Animasyonda bir sayı seçilip butona basıldığında zar atış işlemi gerçekleşir. Seçilen atış sayısına
+                        bağlı olarak beklenen değer hesaplanır. Denge tahtasında zar atış işlemi için bilinen değer(3.50) ile 
+                        karşılaştırılır. Zar animasyonu temsilidir.
+                    </p>
+                    <canvas id="zar">
+                        <script src="../babylonkod/zar.js"></script>
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
